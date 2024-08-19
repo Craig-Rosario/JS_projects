@@ -1,0 +1,19 @@
+.centre {
+    text-align: center;
+}
+
+.bg-red {
+    background: red;
+    
+    
+    
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.centre
+{
+    justify-content: center;
+    align-items: center;
+}
