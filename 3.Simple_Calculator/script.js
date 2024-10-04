@@ -1,22 +1,21 @@
+const display = document.getElementById("display");
 
-
-const display=document.getElementById("display");
-
-function display_res(input){
-    display.value+=input;
-}
-
-
-function clear_res(){
-    display.value=" ";
-}
-
-
-function calc(){
-    try{
-        display.value=eval(display.value);
+function display_res(input) {
+    if (input === '=') {
+        calc();
+    } else {
+        display.textContent += input; 
     }
-    catch(error){
-        display.value="Err";
+}
+
+function clear_res() {
+    display.textContent = ""; 
+}
+
+function calc() {
+    try {
+        display.textContent = eval(display.textContent); 
+    } catch (error) {
+        display.textContent = "Err"; 
     }
 }

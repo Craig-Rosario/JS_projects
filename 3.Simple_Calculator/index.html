@@ -8,28 +8,27 @@
 </head>
 <body>
     <div id="Calculator">
-        <div id="display"> </div>
+        <div id="display"></div>
         <div id="buttons">
-            <button onclick="disply_res()" id="+" class="opr">+</button>
-            <button onclick="disply_res()" id="7">7</button>
-            <button onclick="disply_res()" id="8">8</button>
-            <button onclick="disply_res()" id="9">9</button>
-            <button onclick="disply_res()" id="-" class="opr">-</button>
-            <button onclick="disply_res()" id="4">4</button>
-            <button onclick="disply_res()" id="5">5</button>
-            <button onclick="disply_res()" id="6">6</button>
-            <button onclick="disply_res()" id="*" class="opr">*</button>
-            <button onclick="disply_res()" id="1">1</button>
-            <button onclick="disply_res()" id="2">2</button>
-            <button onclick="disply_res()" id="3">3</button>
-            <button onclick="disply_res()" id="/" class="opr">/</button>
-            <button onclick="disply_res()" id="0">0</button>
-            <button onclick="disply_res()" id=".">.</button>
-            <button onclick="disply_res()" id="=">=</button>
-            <button onclick="disply_res()" id="C" class="opr">C</button>
+            <button onclick="display_res('+')" id="plus" class="opr">+</button>
+            <button onclick="display_res('7')" id="7">7</button>
+            <button onclick="display_res('8')" id="8">8</button>
+            <button onclick="display_res('9')" id="9">9</button>
+            <button onclick="display_res('-')" id="minus" class="opr">-</button>
+            <button onclick="display_res('4')" id="4">4</button>
+            <button onclick="display_res('5')" id="5">5</button>
+            <button onclick="display_res('6')" id="6">6</button>
+            <button onclick="display_res('*')" id="multiply" class="opr">*</button>
+            <button onclick="display_res('1')" id="1">1</button>
+            <button onclick="display_res('2')" id="2">2</button>
+            <button onclick="display_res('3')" id="3">3</button>
+            <button onclick="display_res('/')" id="divide" class="opr">/</button>
+            <button onclick="display_res('0')" id="0">0</button>
+            <button onclick="display_res('.')" id="dot">.</button>
+            <button onclick="display_res('=')" id="equals">=</button>
+            <button onclick="clear_res()" id="C" class="opr">C</button>
         </div>
     </div>
-
 
     <script src="script.js"></script>
 </body>
