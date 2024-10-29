@@ -117,3 +117,35 @@ footer{
     margin: 7px 0;
     cursor: pointer;
 }
+
+
+
+
+/* Order file */
+
+.order-page {
+    margin: 0; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #333346; 
+}
+
+#final_cart {
+    width: 40vh;
+    height: 60vh;
+    text-align: center; 
+    padding: 10px; 
+    border: 1px solid #333; 
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 10px rgba(162, 161, 161, 0.2); 
+}
+
+#final_items p{
+    margin: 5px;
+    background-color: #cacaca;
+    text-align: initial;
+    padding: 10px;
+}
