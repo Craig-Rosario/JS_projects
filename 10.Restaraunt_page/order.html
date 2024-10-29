@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="order-page">
+    <div id="buttons">
+        <button class="btn" id="HomeButton">Home</button>
+    </div>
     <div id="final_cart">
         <div id="final_items">
             <p>Pizza</p>
@@ -14,9 +17,11 @@
             <p>Pizza</p>
         </div>
         <div id="final_total">
-            <p>Your total is: </p>
+            <p id="money">Your total is: </p>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js">
+        document.getElementById('totalAmount').textContent = localStorage.getItem('total') || '0';
+    </script>
 </body>
 </html>

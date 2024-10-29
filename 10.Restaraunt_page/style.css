@@ -85,6 +85,7 @@ footer{
     background-color: #333346;
     color: #FF9;
     font-size: 55px;
+    flex-direction: column;
 }
 
 .pza{
@@ -112,7 +113,7 @@ footer{
 .ovs{
     width: 250px;
 }
-#AddButton{
+.AddButton{
     padding: 7px;
     margin: 7px 0;
     cursor: pointer;
@@ -130,8 +131,11 @@ footer{
     justify-content: center; 
     align-items: center; 
     background-color: #333346; 
+    flex-direction: column;
 }
-
+.order-page #buttons{
+    margin: 20px 0 50px 0;
+}
 #final_cart {
     width: 40vh;
     height: 60vh;
