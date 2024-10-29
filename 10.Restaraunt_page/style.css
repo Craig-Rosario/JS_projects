@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333346;
+    padding: 20px;
+}
+
+#hero{
+    margin: 20px;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FF9;
+
+}
+
+.btn{
+    width: 90px;
+    padding: 10px;
+    margin: 0 20px;
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: #2F4F4F;
+    color: #e7e7e7;
+}
+.btn:hover{
+    background-color: #467373;
+    cursor: pointer;
+}
+
+#main{
+    display: flex;
+    justify-content: end;
+    background-color: #f4f4f4;
+}
+#pizza_img{
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 1150px;
+    height: 373px;
+    margin: 116px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+#pizza_img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+#desc{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding: 60px;
+    font-size: x-large;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+    background-color: #2d2d42;
+    color: #a8a4a4;
+}
