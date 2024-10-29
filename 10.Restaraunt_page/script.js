@@ -1,38 +1,40 @@
+let total = 0;
 
-
-
-
-let total = parseInt(localStorage.getItem('total')) || 0;
-
-document.querySelector('#HomeButton').onclick = function() {
-    window.location.href = 'home.html';
+function update() {
+    console.log("UPDATEE");
+    document.querySelector("#money").textContent = "Your total is: " + total + "$";
 }
 
-document.querySelector('#MenuButton').onclick = function() {
-    window.location.href = 'menu.html';
-}
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#HomeButton').onclick = function() {
+        window.location.href = 'home.html';
+    }
 
-document.querySelector('#OrderButton').onclick = function() {
+    document.querySelector('#MenuButton').onclick = function() {
+        window.location.href = 'menu.html';
+    }
 
-    window.location.href = 'order.html';
-}
+    document.querySelector('#OrderButton').onclick = function() {
+        window.location.href = 'order.html';
+    }
 
-document.querySelector('#BBQ').onclick = function() {
-    total += 15;
-    localStorage.setItem('total', total);
-    console.log("Total is: " + total);
-}
-console.log("HI")
+    document.querySelector('#BBQ').onclick = function() {
+        total += 15;
+        console.log("Total is: " + total);
+        update();
+    }
 
-document.querySelector('#PPR').onclick = function() {
-    total += 12;
-    localStorage.setItem('total', total);
-    console.log("Total is: " + total);
-}
-console.log("HI")
+    document.querySelector('#PPR').onclick = function() {
+        total += 12;
+        console.log("Total is: " + total);
+        update();
+    }
 
-document.querySelector('#MGH').onclick = function() {
-    total += 8;
-    localStorage.setItem('total', total);
-    console.log("Total is: " + total);
-}
+    document.querySelector('#MGH').onclick = function() {
+        total += 8;
+        console.log("Total is: " + total);
+        update();
+    }
+
+    update(); // Initialize display
+});
