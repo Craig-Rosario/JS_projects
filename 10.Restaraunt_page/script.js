@@ -1,40 +1,69 @@
-let total = 0;
+// Retrieve total and pizza counts from localStorage or initialize if not set
+let total = parseInt(localStorage.getItem('total')) || 0;
+let bbq_count = parseInt(localStorage.getItem('bbq_count')) || 0;
+let ppr_count = parseInt(localStorage.getItem('ppr_count')) || 0;
+let mgh_count = parseInt(localStorage.getItem('mgh_count')) || 0;
 
-function update() {
-    console.log("UPDATEE");
-    document.querySelector("#money").textContent = "Your total is: " + total + "$";
+// Update the display with the current total
+function updateTotalDisplay() {
+    const moneyElement = document.querySelector("#money");
+    if (moneyElement) {
+        moneyElement.textContent = "Your total is: " + total + "$";
+    }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#HomeButton').onclick = function() {
-        window.location.href = 'home.html';
-    }
+// Update the display for pizza counts in order.html
+function updatePizzaDisplay() {
+    const bbqElement = document.querySelector("#bbqDisplay");
+    const pprElement = document.querySelector("#pprDisplay");
+    const mghElement = document.querySelector("#mghDisplay");
 
-    document.querySelector('#MenuButton').onclick = function() {
-        window.location.href = 'menu.html';
-    }
+    if (bbqElement) bbqElement.textContent = "Barbeque Pizza x " + bbq_count;
+    if (pprElement) pprElement.textContent = "Pepperoni Pizza x " + ppr_count;
+    if (mghElement) mghElement.textContent = "Margarita Pizza x " + mgh_count;
+}
 
-    document.querySelector('#OrderButton').onclick = function() {
-        window.location.href = 'order.html';
-    }
+// Navigation buttons
+document.querySelector('#HomeButton').onclick = function () {
+    window.location.href = 'home.html';
+}
 
-    document.querySelector('#BBQ').onclick = function() {
-        total += 15;
-        console.log("Total is: " + total);
-        update();
-    }
+document.querySelector('#MenuButton').onclick = function () {
+    window.location.href = 'menu.html';
+}
 
-    document.querySelector('#PPR').onclick = function() {
-        total += 12;
-        console.log("Total is: " + total);
-        update();
-    }
+document.querySelector('#OrderButton').onclick = function () {
+    window.location.href = 'order.html';
+}
 
-    document.querySelector('#MGH').onclick = function() {
-        total += 8;
-        console.log("Total is: " + total);
-        update();
-    }
-
-    update(); // Initialize display
+// Pizza buttons
+document.querySelector('#BBQ')?.addEventListener('click', function () {
+    total += 15;
+    bbq_count += 1;
+    localStorage.setItem('total', total);
+    localStorage.setItem('bbq_count', bbq_count);
+    updateTotalDisplay();
+    updatePizzaDisplay();
 });
+
+document.querySelector('#PPR')?.addEventListener('click', function () {
+    total += 12;
+    ppr_count += 1;
+    localStorage.setItem('total', total);
+    localStorage.setItem('ppr_count', ppr_count);
+    updateTotalDisplay();
+    updatePizzaDisplay();
+});
+
+document.querySelector('#MGH')?.addEventListener('click', function () {
+    total += 8;
+    mgh_count += 1;
+    localStorage.setItem('total', total);
+    localStorage.setItem('mgh_count', mgh_count);
+    updateTotalDisplay();
+    updatePizzaDisplay();
+});
+
+// Initial display update when the page loads
+updateTotalDisplay();
+updatePizzaDisplay();
