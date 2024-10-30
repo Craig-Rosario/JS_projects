@@ -67,3 +67,31 @@ document.querySelector('#MGH')?.addEventListener('click', function () {
 // Initial display update when the page loads
 updateTotalDisplay();
 updatePizzaDisplay();
+
+
+
+document.querySelector("#rst").addEventListener('click', function() {
+    // Reset counts to zero
+    bbq_count = 0;
+    ppr_count = 0;
+    mgh_count = 0;
+    total = 0;
+
+    // Clear values from localStorage
+    localStorage.setItem('total', total);
+    localStorage.setItem('bbq_count', bbq_count);
+    localStorage.setItem('ppr_count', ppr_count);
+    localStorage.setItem('mgh_count', mgh_count);
+
+    // Update display to show reset counts
+    const bbqElement = document.querySelector("#bbqDisplay");
+    const pprElement = document.querySelector("#pprDisplay");
+    const mghElement = document.querySelector("#mghDisplay");
+
+    if (bbqElement) bbqElement.textContent = "Barbeque Pizza x " + 0;
+    if (pprElement) pprElement.textContent = "Pepperoni Pizza x " + 0;
+    if (mghElement) mghElement.textContent = "Margarita Pizza x " + 0;
+
+    // Update total display to show reset total
+    updateTotalDisplay();
+});
