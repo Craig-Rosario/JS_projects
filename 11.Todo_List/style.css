@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#card {
+    background-color: #bdb7b7;
+    padding: 20px;
+    height: 50vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #907c7c;
+}
+
+#input {
+    margin: 0 0 20px 0;
+}
+
+#task {
+    width: 215px;
+    height: 30px;
+}
+
+#todo {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 5px;
+
+
+}
