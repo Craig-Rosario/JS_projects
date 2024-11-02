@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #9f8a8a;
+}
+
+#card {
+    background-color: #eadc05;
+    padding: 30px;
+    border: 3px solid black;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #4b4848;
+}
+
+#srch {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+#srchInput {
+    margin: 0 10px;
+    height: 25px;
+}
+
+#srchBtn {
+    padding: 4px;
+    width: 60px;
+}
+
+
+#foodImg {
+    border: 3px solid black;
+    width: 300px;
+    height: 168px;
+    border-radius: 4px;
+    margin: 12px;
+}
+
+#foodName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eca83e;
+    border: 2px solid #755a08;
+    margin: 12px;
+}
+#foodIng{
+    margin: 12px;
+}
+
+#rcpBtn{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: #2d2d97;
+    color: #eeecec;
+    font-weight: bold;
+    font-size: inherit;
+    cursor: pointer;
+}
+#rcpBtn:hover{
+    background-color: #51519e;
+}
