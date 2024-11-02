@@ -22,8 +22,8 @@ body {
     border: 2px solid black;
     box-shadow: 5px 5px 5px gray;
     border-radius: 7px;
-    min-width: 40vw;
-    min-height: 60vh;
+    max-width: 40vw;
+    max-height: 85vh;
 }
 
 
@@ -39,7 +39,9 @@ body {
 #joke{
     font-size: 45px;
 }
-
+#JokeText{
+    text-align: center;
+}
 
 
 
