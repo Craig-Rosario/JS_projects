@@ -67,6 +67,21 @@ body {
     font-size: inherit;
     cursor: pointer;
 }
+
 #rcpBtn:hover{
+    background-color: #51519e;
+}
+
+#aboutBtn{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: #2d2d97;
+    color: #eeecec;
+    font-weight: bold;
+    font-size: inherit;
+    cursor: pointer;
+}
+#aboutBtn:hover{
     background-color: #51519e;
 }
