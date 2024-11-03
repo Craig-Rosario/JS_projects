@@ -12,6 +12,8 @@ body {
 }
 
 #card {
+    min-height: 60vh;
+    min-width: 40vw;
     background-color: #eadc05;
     padding: 30px;
     border: 3px solid black;
@@ -37,12 +39,14 @@ body {
 
 
 #foodImg {
+    
     border: 3px solid black;
     width: 300px;
     height: 168px;
     border-radius: 4px;
-    margin: 12px;
+    margin: 12px 12px 12px 155px;
 }
+
 
 #foodName {
     display: flex;
@@ -84,4 +88,13 @@ body {
 }
 #aboutBtn:hover{
     background-color: #51519e;
+}
+
+#rcpHead{
+    text-align: left;
+    max-width: 10px;
+}
+#instruct{
+    padding: 10px;
+    margin: 10px;
 }
